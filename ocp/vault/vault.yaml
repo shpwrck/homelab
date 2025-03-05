@@ -30,6 +30,21 @@ spec:
             valuesObject:
               global:
                 openshift: true
+              injector:
+                enabled: true
+              server:
+                enabled: true
+                route:
+                  enabled: true
+                  host: vault.apps.ocp.k8socp.com
+                  tls:
+                    termination: edge
+                ha:
+                  enabled: true
+                ui:
+                  enabled: true
+                csi:
+                  enabled: true
       syncPolicy:
         automated:
           allowEmpty: true
