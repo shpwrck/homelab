@@ -26,9 +26,10 @@ spec:
           repoURL: https://helm.releases.hashicorp.com
           targetRevision: 0.29.1
           repositoryType: helm
-          valuesObject:
-            global:
-              openshift: true
+          helm:
+            valuesObject:
+              global:
+                openshift: true
       syncPolicy:
         automated:
           allowEmpty: true
