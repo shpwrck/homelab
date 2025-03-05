@@ -27,24 +27,23 @@ spec:
           targetRevision: 0.29.1
           helm:
             parameters:
-            - name: "global.openshift"
-              value: true
-            - name: "injector.enabled"
-              value: true
-            - name: "server.enabled"
-              value: true
-            - name: "server.route.enabled"
-              value: true
-            - name: "server.route.host"
-              value: "vault.apps.ocp.k8socp.com"
-            - name: "server.route.tls.termination"
-              value: "edge"
-            - name: "server.ha.enabled" 
-              value: true
-            - name: "server.ui.enabled"
-              value: true
-            - name: "server.csi.enabled"
-              value: true
+              global:
+                openshift: true
+              injector:
+                enabled: true
+              server:
+                enabled: true
+                route:
+                  enabled: true
+                  host: vault.apps.ocp.k8socp.com
+                  tls:
+                    termination: edge
+                ha:
+                  enabled: true
+                ui:
+                  enabled: true
+                csi:
+                  enabled: true
       syncPolicy:
         automated:
           allowEmpty: true
