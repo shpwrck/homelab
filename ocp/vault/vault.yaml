@@ -25,7 +25,6 @@ spec:
         - chart: vault
           repoURL: https://helm.releases.hashicorp.com
           targetRevision: 0.29.1
-          repositoryType: helm
           helm:
             valuesObject:
               global:
